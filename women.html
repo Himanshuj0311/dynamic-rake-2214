@@ -21,6 +21,9 @@
 
         #nav>div:nth-child(1) {
             width: 40%;
+            margin-top: 15px;
+            margin-left: 5px;
+            margin-right: 25px;
         }
 
         #nav>div:nth-child(2) {
@@ -63,9 +66,16 @@
 
         #nav>div:nth-child(3)>button {
             border: none;
-            background-color: white;
+            background-color:rgb(203, 196, 196);
             height: 50px;
             width: 10%;
+        }
+        #nav>div:nth-child(3)>input{
+            border-bottom: 1px solid black;
+            border-top:none;
+            border-left: none;
+            border-right: none;
+            background-color:rgb(203, 196, 196);
         }
 
         #silder {
@@ -79,30 +89,7 @@
             margin-left: -25px;
         }
 
-        /* .Featured-partners{
-            width: 100%;
-            height: 350px;
-            background-color: white;
-            text-align: center;
-            margin-top: 50px;
-            margin-bottom: 40px;
-        }
-        .swiper-slide{
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            text-align: center;
-            width: 70%;
-            margin-left: 30px;
-            margin-top: 50px;
         
-
-        }
-        .swiper-slide div{
-            width: 60%;
-            padding: -20px;
-        }
-        .swiper-slide img{
-            width: 50%;} */
 
         #Shop-Women {
             text-align: center;
@@ -199,7 +186,50 @@
         #footer{
             display: grid;
             grid-template-columns: repeat(5,1fr);
+            margin-top: 20px;
+
         }
+
+            #footer-logo{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+        .h4{
+            text-align: center;
+        }
+        #footer>div:nth-child(5)>button{
+            margin-top: 20px;
+            width: 70%;
+            height: 40px;
+            font-size: 20px;
+        }
+        #footer>div:nth-child(5)>input{
+            border-left: none;
+            border-top: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+        }
+        h4{
+            margin-top: -10px;
+        }
+        #icon{
+            display: flex;
+        justify-content:right;
+ width: 40%;
+ margin-left: 800px;
+ 
+        }
+        #icon>img{
+            width: 5%;
+        }
+
+        /* .img{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+           justify-content: center;
+            
+        } */
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
@@ -252,46 +282,53 @@
             alt="">
     </div>
     <!-- Featured Partners -->
+    <!-- <div class="swiper">
+        <h1>New To Sale</h1>
+         Additional required wrapper -->
+        <!-- <div class="swiper-wrapper">
+            Slides -->
+           \ -->
+            <!-- <div>
+                
+                <div class="img">
+                    <img src="https://cdn.modesens.com/banner/20220708-BLUEMERCURY-logo.png" alt="">
+                    <img src="https://cdn.modesens.com/banner/20220708-BLUEMERCURY-logo.png" alt="">
+                    <img src="https://cdn.modesens.com/merchant/visualmood-logo.png?w=400" alt="">
+                    <img src="https://cdn.modesens.com/merchant/visualmood-logo.png?w=400" alt="">
+                    <img src="https://cdn.modesens.com/banner/20220708-REPETTO-logo.png" alt="">
+                    <img src="https://cdn.modesens.com/banner/20220708-NOBLEMARS-logo.png" alt="">
+                    <img src="https://cdn.modesens.com/banner/20220708-LAPOINTE-logo.png" alt="">
+                    <img src="https://cdn.modesens.com/banner/20220708-MANGO-logo.png" alt="">
+                   </div>
+            </div> -->
+            <!-- <div>
+                
+                <div class="img">
+                    <img src="https://cdn.modesens.com/banner/20211014-GUCCI-logo.png" alt="">
+                    <img src="https://cdn.modesens.com/banner/20211014-PRADA-logo.png" alt="">
+                    <img src="https://cdn.modesens.com/banner/20211014-SAINT-LAURENT-logo.png" alt="">
+                    <img src="https://cdn.modesens.com/banner/20211014-BOTTEGA-VENETA-logo.png" alt="">
+                    <img src="https://cdn.modesens.com/banner/20211014-BOTTEGA-VENETA-logo.png" alt="">
+                    <img src="https://cdn.modesens.com/banner/20211014-FENDI-logo.png" alt="">
+                    <img src="https://cdn.modesens.com/banner/20211014-VERSACE-logo.png" alt="">
+                    <img src="https://cdn.modesens.com/banner/20211014-BALENCIAGA-logo.png" alt="">
+                   </div>
+            </div>
+            ... -->
+        <!-- </div>
+        If we need pagination
+        <div class="swiper-pagination"></div> -->
 
-    <!-- <div class="Featured-partners">
-        <h1>Featured Partners</h1>
-        <h2>Compare across our 500+ partner stores to find the products you want at the best price.</h2>
-       
-        <div class="swiper">
-            Additional required wrapper -->
-    <!-- <div class="swiper-wrapper"> -->
-    <!-- Slides -->
-    <!-- <div class="silder-img">
-                <img src="https://cdn.modesens.com/banner/20220708-SSENSE-logo.png" alt="">
-                <img src="https://cdn.modesens.com/banner/20220708-NET-A-PORTER-logo.png" alt="">
-                <img src="https://cdn.modesens.com/banner/20220708-FARFETCH-logo.png" alt="">
-                <img src="https://cdn.modesens.com/banner/20220708-NORDSTROM-logo.png" alt="">
-                <img src="https://cdn.modesens.com/banner/20220708-MATCHESFASHION-logo.png" alt="">
-                <img src="https://cdn.modesens.com/banner/20220708-SAKS-FIFTH-AVENUE-logo.png" alt="">
-                <img src="https://cdn.modesens.com/banner/20220708-MYTHERESA-logo.png" alt="">
-                <img src="https://cdn.modesens.com/banner/20220708-SHOPBOP-logo.png" alt="">
-                <img src="https://cdn.modesens.com/banner/20220708-ITALIST-logo.png" alt="">
-                <img src="https://cdn.modesens.com/banner/20220708-LUISAVIAROMA-logo.png" alt="">
-                <img src="https://cdn.modesens.com/banner/20220708-BROWNSFASHION-logo.png" alt="">
-                <img src="https://cdn.modesens.com/banner/20220708-CETTIRE-logo.png" alt="">
-            </div>
-            <div  class="silder-img">
-                <img src="https://cdn.modesens.com/banner/20211014-GUCCI-logo.png" alt="">
-                <img src="https://cdn.modesens.com/banner/20211014-PRADA-logo.png" alt="">
-                <img src="https://cdn.modesens.com/banner/20211014-SAINT-LAURENT-logo.png" alt="">
-                <img src="https://cdn.modesens.com/banner/20211014-BOTTEGA-VENETA-logo.png" alt="">
-                <img src="https://cdn.modesens.com/banner/20211014-BURBERRY-logo.png" alt="">
-                <img src="https://cdn.modesens.com/banner/20211014-FENDI-logo.png" alt="">
-                <img src="https://cdn.modesens.com/banner/20220708-MYTHERESA-logo.png" alt="">
-                <img src="https://cdn.modesens.com/banner/20220708-SHOPBOP-logo.png" alt="">
-                <img src="https://cdn.modesens.com/banner/20220708-ITALIST-logo.png" alt="">
-                <img src="https://cdn.modesens.com/banner/20220708-LUISAVIAROMA-logo.png" alt="">
-                <img src="https://cdn.modesens.com/banner/20220708-BROWNSFASHION-logo.png" alt="">
-                <img src="https://cdn.modesens.com/banner/20220708-CETTIRE-logo.png" alt="">
-            </div>
-            </div>
-        </div>
-        </div> -->
+        <!-- If we need navigation buttons
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+
+        <!-- If we need scrollbar
+        <div class="swiper-scrollbar"></div> -->
+        <!-- <button>SHOP MORE</button>
+    </div> --> -->
+
+   
 
 
 
@@ -720,6 +757,7 @@
         </div>
     </div>
     <!-- footer -->
+    <hr>
     <div id="footer">
         <div>
             <h3>CUSTOMER CARE</h3>
@@ -746,7 +784,7 @@
         </div>
         <div>
             <h3>Community Guidelines</h3>
-            <div>
+            <div id="footer-logo">
                 <img src="https://cdn.modesens.com/static/img/20220815download_ios.svg" alt="">
                 <img src="https://cdn.modesens.com/static/img/20220815download_android.svg" alt="">
                 <img src="https://cdn.modesens.com/static/img/20220815down_chromestrore.svg" alt="">
@@ -758,8 +796,19 @@
             <br>
             <button>SUBMIT</button>
         </div>
-        <h4>When you follow our links to visit a brand or retailer’s website or make a purchase, ModeSens may earn a commission.</h4>
     </div>
+    <h4 class="h4">When you follow our links to visit a brand or retailer’s website or make a purchase, ModeSens may earn a commission.</h4>
+     <hr>
+
+     <div id="icon">
+        <img src="https://cdn.modesens.com/static/img/20220726Pinterest.svg" alt="">
+        <img src="https://cdn.modesens.com/static/img/20220726Twitter.svg" alt="">
+        <img src="https://cdn.modesens.com/static/img/20220726Ins.svg" alt="">
+        <img src="https://cdn.modesens.com/static/img/20220726Facebook.svg" alt="">
+        <img src="https://cdn.modesens.com/static/img/20220726Weibo.svg" alt="">
+        <img src="https://cdn.modesens.com/static/img/20220726Reddit.svg" alt="">
+        <img src="https://cdn.modesens.com/static/img/20220726Discord.svg" alt="">
+     </div>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
@@ -781,26 +830,7 @@
         i++;
     }, 2000);
 
-    // const swiper = new Swiper('.swiper', {
-    //   // Optional parameters
-
-    //   loop: true,
-
-    //   // If we need pagination
-    //   pagination: {
-    //     el: '.swiper-pagination',
-    //     clickable:true,
-    //   },
-
-    //   // Navigation arrows
-    //   navigation: {
-    //     nextEl: '.swiper-button-next',
-    //     prevEl: '.swiper-button-prev',
-    //   },
-
-    //   // And if we need scrollbar
-
-    // });
+    
 
 
     const swiper = new Swiper('.swiper', {
@@ -823,4 +853,6 @@
         // And if we need scrollbar
 
     });
+    
+   
 </script>
