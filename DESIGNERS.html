@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESIGNERS</title>
+    <style>
+        #top-part{
+            font-weight:lighter;
+        }
+        #top-part>div:nth-child(1){
+            text-align: center;
+            width: 70%;
+            margin: auto;
+        }
+        #top-part>div:nth-child(2){
+            width: 70%;
+            margin: auto;
+            margin-top: 4%;
+           
+        }
+        #top-part>div:nth-child(3){
+            width: 70%;
+            margin: auto;
+        }
+        #top-part>div:nth-child(3)>p{
+            margin-top: -1.5%;
+        }
+        input{
+            width: 40%;
+            margin-left: 5px;
+            border: none;
+            border-bottom: 1px solid black;
+        }
+       .name{
+        display: flex;
+        justify-content: start;
+        width: 70%;
+        margin: auto;
+
+       }
+       .name div{
+        margin-right: 150px;
+       }
+       #designer>h2{
+        margin-left: 15%;
+       }
+       h5{
+        margin-top:-5%;
+       }
+       #nav {
+            display: flex;
+            justify-content: space-evenly;
+            background-color: rgb(203, 196, 196);
+
+        }
+
+        img {
+            width: 40%;
+
+        }
+
+        #nav>div:nth-child(1) {
+            width: 40%;
+            margin-top: 15px;
+            margin-left: 5px;
+            margin-right: 25px;
+        }
+
+        #nav>div:nth-child(2) {
+            width: 100%;
+            margin-left: -200px;
+            margin-top: 16px;
+
+
+        }
+
+        #nav>div:nth-child(2)>a {
+            text-decoration: none;
+            color: black;
+            padding: 8px;
+            font-size: 15px;
+
+        }
+
+        #nav>div:nth-child(3) {
+            display: flex;
+            justify-content: space-evenly;
+            width: 40%;
+            font-size: 12px;
+        }
+
+        #nav>div:nth-child(3)>img {
+            border-radius: 80px;
+            width: 50%;
+        }
+
+        #nav>div:nth-child(3)>input {
+            width: 40%;
+            height: 20px;
+            margin-top: 10px;
+        }
+
+        #nav>div:nth-child(3)>p {
+            padding-top: 7px;
+        }
+
+        #nav>div:nth-child(3)>button {
+            border: none;
+            background-color:rgb(203, 196, 196);
+            height: 50px;
+            width: 10%;
+        }
+        #nav>div:nth-child(3)>input{
+            border-bottom: 1px solid black;
+            border-top:none;
+            border-left: none;
+            border-right: none;
+            background-color:rgb(203, 196, 196);
+        }
+        #footer{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            margin-top: 20px;
+
+        }
+
+            #footer-logo{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+        .h4{
+            text-align: center;
+        }
+        #footer>div:nth-child(5)>button{
+            margin-top: 20px;
+            width: 70%;
+            height: 40px;
+            font-size: 20px;
+        }
+        #footer>div:nth-child(5)>input{
+            border-left: none;
+            border-top: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+        }
+        h4{
+            margin-top: -10px;
+        }
+        #icon{
+            display: flex;
+        justify-content:right;
+ width: 40%;
+ margin-left: 800px;
+ 
+        }
+        #icon>img{
+            width: 5%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <div><a href="women.html"><img src="./stylize-logo-zip-file/png/logo-no-background.png" alt=""></a></div>
+        <div>
+            <a href="women.html">WOMEN</a>
+            <a href="Men.html">MEN</a>
+            <a href="Kid.html">KIDS</a>
+            <a href="Home.html">HOME</a>
+            <a href="">DESIGNERS</a>
+            <a href="">COMMUNITY</a>
+            <a href="">WHY MODESENS</a>
+            <a href="" class="red">SALE</a>
+            <a href="" class="red">GIFT GUIDE</a>
+        </div>
+        <div>
+            <!-- <img src="data:image/jpeg;base64,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" alt=""> -->
+            <p>USER NAME</p>
+            <button>CART</button>
+            <input type="text" placeholder="SEARCH">
+
+        </div>
+    </div>
+    <div id="top-part">
+        <div>
+            <h2>We Feature Top Women‘s Designers From Around The World</h2>
+            <p>Customize your shopping experience and curate your wardrobe with ease by selecting favorites designers or
+                adding new arrivals alerts</p>
+        </div>
+        <div>
+            <hr>
+            <h3>A
+                B
+                C
+                D
+                E
+                F
+                G
+                H
+                I
+                J
+                K
+                L
+                M
+                N
+                O
+                P
+                Q
+                R
+                S
+                T
+                U
+                V
+                W
+                X
+                Y
+                Z
+                #
+                <span><input type="text"placeholder="filter by designer name" ></span>
+            </h3>
+               <hr>
+        </div>
+        <div>
+            <h1>My Favorite Designers</h1>
+            <p>Tap the heart icon to add your favorite designers. We will keep you updated with their new arrivals and latest sales!</p>
+        </div>
+    </div>
+
+    <div id="designer">
+        <h2>A</h2>
+        <div class="name">
+            <div>
+                <h5>A BATHING APE
+                </h5>
+                <h5>A BLONDE AND HER BAG</h5>
+                <h5>A D SUTTON & SONS</h5>
+                <h5>A GOLD E
+                </h5>
+                <h5>A KJAERBEDE
+                </h5>
+                <h5>A LINE
+                </h5>
+                <h5>A MÒÒD
+                </h5>
+                <h5>A PART OF THE ART
+                </h5>
+                <h5>
+                    A PERFECT NOMAD
+                </h5>
+                <h5>
+                    A SHIRT THING
+                </h5>
+            </div>
+            <div>
+                <h5>A BATHING APE
+                </h5>
+                <h5>A BLONDE AND HER BAG</h5>
+                <h5>A D SUTTON & SONS</h5>
+                <h5>A GOLD E
+                </h5>
+                <h5>A KJAERBEDE
+                </h5>
+                <h5>A LINE
+                </h5>
+                <h5>A MÒÒD
+                </h5>
+                <h5>A PART OF THE ART
+                </h5>
+                <h5>
+                    A PERFECT NOMAD
+                </h5>
+                <h5>
+                    A SHIRT THING
+                </h5>
+            </div>
+            <div>
+                <h5>A BATHING APE
+                </h5>
+                <h5>A BLONDE AND HER BAG</h5>
+                <h5>A D SUTTON & SONS</h5>
+                <h5>A GOLD E
+                </h5>
+                <h5>A KJAERBEDE
+                </h5>
+                <h5>A LINE
+                </h5>
+                <h5>A MÒÒD
+                </h5>
+                <h5>A PART OF THE ART
+                </h5>
+                <h5>
+                    A PERFECT NOMAD
+                </h5>
+                <h5>
+                    A SHIRT THING
+                </h5>
+            </div>
+
+      
+        
+    </div>
+    <h2>B</h2>
+    <div class="name">
+        <div>
+            <h5>B & ME
+           </h5>
+            <h5>B COLLECTION BY BOBEAU
+           </h5>
+            <h5>B FYNE
+           </h5>
+            <h5>B O C
+           </h5>
+            <h5>B STORE</h5>
+            <h5>B+AB</h5>
+            <h5>B-LUSH</h5>
+            <h5>B.A. PRINTED ARTWORKS</h5>
+            <h5>B.TEMPT'D BY WACOAL</h5>
+            <h5>BA&SH X JAY AHR</h5>
+           </div>
+           <div>
+            <h5>B & ME
+           </h5>
+            <h5>B COLLECTION BY BOBEAU
+           </h5>
+            <h5>B FYNE
+           </h5>
+            <h5>B O C
+           </h5>
+            <h5>B STORE</h5>
+            <h5>B+AB</h5>
+            <h5>B-LUSH</h5>
+            <h5>B.A. PRINTED ARTWORKS</h5>
+            <h5>B.TEMPT'D BY WACOAL</h5>
+            <h5>BA&SH X JAY AHR</h5>
+           </div>
+           <div>
+            <h5>B & ME
+           </h5>
+            <h5>B COLLECTION BY BOBEAU
+           </h5>
+            <h5>B FYNE
+           </h5>
+            <h5>B O C
+           </h5>
+            <h5>B STORE</h5>
+            <h5>B+AB</h5>
+            <h5>B-LUSH</h5>
+            <h5>B.A. PRINTED ARTWORKS</h5>
+            <h5>B.TEMPT'D BY WACOAL</h5>
+            <h5>BA&SH X JAY AHR</h5>
+           </div>
+    </div>
+    <h2>C</h2>
+    <div class="name">
+        <div>
+            <h5>A BATHING APE
+            </h5>
+            <h5>A BLONDE AND HER BAG</h5>
+            <h5>A D SUTTON & SONS</h5>
+            <h5>A GOLD E
+            </h5>
+            <h5>A KJAERBEDE
+            </h5>
+            <h5>A LINE
+            </h5>
+            <h5>A MÒÒD
+            </h5>
+            <h5>A PART OF THE ART
+            </h5>
+            <h5>
+                A PERFECT NOMAD
+            </h5>
+            <h5>
+                A SHIRT THING
+            </h5>
+        </div>
+        <div>
+            <h5>A BATHING APE
+            </h5>
+            <h5>A BLONDE AND HER BAG</h5>
+            <h5>A D SUTTON & SONS</h5>
+            <h5>A GOLD E
+            </h5>
+            <h5>A KJAERBEDE
+            </h5>
+            <h5>A LINE
+            </h5>
+            <h5>A MÒÒD
+            </h5>
+            <h5>A PART OF THE ART
+            </h5>
+            <h5>
+                A PERFECT NOMAD
+            </h5>
+            <h5>
+                A SHIRT THING
+            </h5>
+        </div>
+        <div>
+            <h5>A BATHING APE
+            </h5>
+            <h5>A BLONDE AND HER BAG</h5>
+            <h5>A D SUTTON & SONS</h5>
+            <h5>A GOLD E
+            </h5>
+            <h5>A KJAERBEDE
+            </h5>
+            <h5>A LINE
+            </h5>
+            <h5>A MÒÒD
+            </h5>
+            <h5>A PART OF THE ART
+            </h5>
+            <h5>
+                A PERFECT NOMAD
+            </h5>
+            <h5>
+                A SHIRT THING
+            </h5>
+        </div>
+
+  
+    
+</div>
+<h2>D</h2>
+<div class="name">
+    <div>
+        <h5>B & ME
+       </h5>
+        <h5>B COLLECTION BY BOBEAU
+       </h5>
+        <h5>B FYNE
+       </h5>
+        <h5>B O C
+       </h5>
+        <h5>B STORE</h5>
+        <h5>B+AB</h5>
+        <h5>B-LUSH</h5>
+        <h5>B.A. PRINTED ARTWORKS</h5>
+        <h5>B.TEMPT'D BY WACOAL</h5>
+        <h5>BA&SH X JAY AHR</h5>
+       </div>
+       <div>
+        <h5>B & ME
+       </h5>
+        <h5>B COLLECTION BY BOBEAU
+       </h5>
+        <h5>B FYNE
+       </h5>
+        <h5>B O C
+       </h5>
+        <h5>B STORE</h5>
+        <h5>B+AB</h5>
+        <h5>B-LUSH</h5>
+        <h5>B.A. PRINTED ARTWORKS</h5>
+        <h5>B.TEMPT'D BY WACOAL</h5>
+        <h5>BA&SH X JAY AHR</h5>
+       </div>
+       <div>
+        <h5>B & ME
+       </h5>
+        <h5>B COLLECTION BY BOBEAU
+       </h5>
+        <h5>B FYNE
+       </h5>
+        <h5>B O C
+       </h5>
+        <h5>B STORE</h5>
+        <h5>B+AB</h5>
+        <h5>B-LUSH</h5>
+        <h5>B.A. PRINTED ARTWORKS</h5>
+        <h5>B.TEMPT'D BY WACOAL</h5>
+        <h5>BA&SH X JAY AHR</h5>
+       </div>
+</div>
+<h2>E</h2>
+       <div class="name">
+           <div>
+               <h5>A BATHING APE
+               </h5>
+               <h5>A BLONDE AND HER BAG</h5>
+               <h5>A D SUTTON & SONS</h5>
+               <h5>A GOLD E
+               </h5>
+               <h5>A KJAERBEDE
+               </h5>
+               <h5>A LINE
+               </h5>
+               <h5>A MÒÒD
+               </h5>
+               <h5>A PART OF THE ART
+               </h5>
+               <h5>
+                   A PERFECT NOMAD
+               </h5>
+               <h5>
+                   A SHIRT THING
+               </h5>
+           </div>
+           <div>
+               <h5>A BATHING APE
+               </h5>
+               <h5>A BLONDE AND HER BAG</h5>
+               <h5>A D SUTTON & SONS</h5>
+               <h5>A GOLD E
+               </h5>
+               <h5>A KJAERBEDE
+               </h5>
+               <h5>A LINE
+               </h5>
+               <h5>A MÒÒD
+               </h5>
+               <h5>A PART OF THE ART
+               </h5>
+               <h5>
+                   A PERFECT NOMAD
+               </h5>
+               <h5>
+                   A SHIRT THING
+               </h5>
+           </div>
+           <div>
+               <h5>A BATHING APE
+               </h5>
+               <h5>A BLONDE AND HER BAG</h5>
+               <h5>A D SUTTON & SONS</h5>
+               <h5>A GOLD E
+               </h5>
+               <h5>A KJAERBEDE
+               </h5>
+               <h5>A LINE
+               </h5>
+               <h5>A MÒÒD
+               </h5>
+               <h5>A PART OF THE ART
+               </h5>
+               <h5>
+                   A PERFECT NOMAD
+               </h5>
+               <h5>
+                   A SHIRT THING
+               </h5>
+           </div>
+
+     
+       
+   </div>
+   <h2>F</h2>
+   <div class="name">
+    <div>
+        <h5>A BATHING APE
+        </h5>
+        <h5>A BLONDE AND HER BAG</h5>
+        <h5>A D SUTTON & SONS</h5>
+        <h5>A GOLD E
+        </h5>
+        <h5>A KJAERBEDE
+        </h5>
+        <h5>A LINE
+        </h5>
+        <h5>A MÒÒD
+        </h5>
+        <h5>A PART OF THE ART
+        </h5>
+        <h5>
+            A PERFECT NOMAD
+        </h5>
+        <h5>
+            A SHIRT THING
+        </h5>
+    </div>
+    <div>
+        <h5>A BATHING APE
+        </h5>
+        <h5>A BLONDE AND HER BAG</h5>
+        <h5>A D SUTTON & SONS</h5>
+        <h5>A GOLD E
+        </h5>
+        <h5>A KJAERBEDE
+        </h5>
+        <h5>A LINE
+        </h5>
+        <h5>A MÒÒD
+        </h5>
+        <h5>A PART OF THE ART
+        </h5>
+        <h5>
+            A PERFECT NOMAD
+        </h5>
+        <h5>
+            A SHIRT THING
+        </h5>
+    </div>
+    <div>
+        <h5>A BATHING APE
+        </h5>
+        <h5>A BLONDE AND HER BAG</h5>
+        <h5>A D SUTTON & SONS</h5>
+        <h5>A GOLD E
+        </h5>
+        <h5>A KJAERBEDE
+        </h5>
+        <h5>A LINE
+        </h5>
+        <h5>A MÒÒD
+        </h5>
+        <h5>A PART OF THE ART
+        </h5>
+        <h5>
+            A PERFECT NOMAD
+        </h5>
+        <h5>
+            A SHIRT THING
+        </h5>
+    </div>
+
+
+
+</div>
+
+       </div>
+<hr>
+       <div id="footer">
+        <div>
+            <h3>CUSTOMER CARE</h3>
+            <h4>Shopper Protection</h4>
+            <h4>Loyalty Program</h4>
+            <h4>Help Center</h4>
+            <h4>Size Guides</h4>
+            <h4>Contact Us / Feedback</h4>
+            <h4>Shipping / Returns</h4>
+        </div>
+        <div>
+            <h3>INFORMATION</h3>
+            <h4>About Us</h4>
+            <h4>Influencer Program</h4>
+            <h4>Partner Stores</h4>
+            <h4>Sitemap</h4>
+        </div>
+        <div>
+            <h3>LEGAL</h3>
+            <h4>Terms Of Use</h4>
+            <h4>Disclosure</h4>
+            <h4>Privacy Policy</h4>
+            <h4>Community Guidelines</h4>
+        </div>
+        <div>
+            <h3>Community Guidelines</h3>
+            <div id="footer-logo">
+                <img src="https://cdn.modesens.com/static/img/20220815download_ios.svg" alt="">
+                <img src="https://cdn.modesens.com/static/img/20220815download_android.svg" alt="">
+                <img src="https://cdn.modesens.com/static/img/20220815down_chromestrore.svg" alt="">
+            </div>
+        </div>
+        <div>
+            <h3>NEWSLETTER SIGN UP</h3>
+            <input type="text" placeholder="Email Addeess">
+            <br>
+            <button>SUBMIT</button>
+        </div>
+    </div>
+    <h4 class="h4">When you follow our links to visit a brand or retailer’s website or make a purchase, ModeSens may earn a commission.</h4>
+     <hr>
+
+     <div id="icon">
+        <img src="https://cdn.modesens.com/static/img/20220726Pinterest.svg" alt="">
+        <img src="https://cdn.modesens.com/static/img/20220726Twitter.svg" alt="">
+        <img src="https://cdn.modesens.com/static/img/20220726Ins.svg" alt="">
+        <img src="https://cdn.modesens.com/static/img/20220726Facebook.svg" alt="">
+        <img src="https://cdn.modesens.com/static/img/20220726Weibo.svg" alt="">
+        <img src="https://cdn.modesens.com/static/img/20220726Reddit.svg" alt="">
+        <img src="https://cdn.modesens.com/static/img/20220726Discord.svg" alt="">
+     </div>
+       
+      
+   
+</body>
+
+</html>
