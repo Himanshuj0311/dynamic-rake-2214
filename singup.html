@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singup</title>
+    <style>
+        #singup{
+            display: flex;
+            align-content: center;
+            justify-content: space-evenly;
+            background-color: whitesmoke;
+            
+        }
+        #singup>div:nth-child(1){
+            background-color: black;
+            color: white;
+            width: 40%;
+            height: 500px;
+           align-content: center;
+           margin-left: 125px;
+          
+        }
+        img{
+            width: 70%;
+            margin-top: 20%;
+            margin-left: 20%;
+           
+        }
+        #singup>div:nth-child(1)>h2{
+            margin-top: -5px;
+            margin-left: 20%;
+        }
+        #singup>div:nth-child(1)>h4{
+            margin-top: -5px;
+            margin-left: 20%;
+        }
+        #singup>div:nth-child(2){
+            text-align: center;
+            background-color: white;
+           padding: 20px;
+           margin-right: 120px;
+        }
+        #singup>div:nth-child(2)>form>input{
+           width: 70%;
+           text-align: center;
+           margin: 5px;
+           height: 40px;
+           background-color: white;
+           border: .5px solid black;
+        }
+        #singup>div:nth-child(2)>form>input:nth-child(4){
+           width: 70%;
+           text-align: center;
+           margin: 10px;
+           height: 40px;
+           font-size: 20px;
+           color: white;
+           background-color: black;
+        }
+        #singup>div:nth-child(2)>div{
+          display: flex;
+          width: 40%;
+          margin: auto;
+          align-items: center;
+          align-content: center;
+          margin-left: 50px;
+         
+        }
+    </style>
+</head>
+<body>
+    <div id="singup">
+       <div>
+        <img src="./stylize-logo-zip-file/png/logo-no-background.png" alt="">
+        <h2>BY SHOPPERS FOR SHOPPERS</h2>
+        <H4>COMPERE ACROSS 500+ STORES</H4>
+        <H4>GET ALERTS ON YOUR ITEMS </H4>
+        <H4>SAVE YOUR SEARCHES</H4>
+        <H4>EARN POINTS</H4>
+       </div>
+       <div>
+        <h3>Creat an account</h3>
+        <h4>Unleash your shopping power.
+            Check ModeSens before you buy.</h4>
+           <form action="">
+            <input type="text" placeholder="Email" id="email">
+            <input type="password" placeholder="password" id="password">
+            <p>Subscribe to personalized sale updates and offers</p>
+            <input type="submit" value="submit">
+           </form>
+            <div>
+                <img src="https://modesens.com/static/img/login-icon/20210617google.svg" alt="">
+                <img src="https://modesens.com/static/img/login-icon/20210617facebook.svg" alt="">
+                <img src="https://modesens.com/static/img/login-icon/20210617apple.svg" alt="">
+                <img src="https://modesens.com/static/img/login-icon/20210617wechat.svg" alt="">
+            </div>
+       </div>
+    </div>
+</body>
+</html>
+<script>
+     let account_data=JSON.parse(localStorage.getItem("account-data")) ||[];
+let form=document.querySelector("form");
+form.addEventListener("submit",function(event){
+  event.preventDefault();
+  let count=0;
+  account_data.forEach(function(el){
+    if(el.email===form.email.value){
+        count++
+    }
+  })
+  if(count>0){
+    alert("usre already registered")
+  }
+  else{
+    let form_data={
+     
+     email:form.email.value,
+     password:form.password.value
+  }
+  if(form_data.email==""||form_data.password==""){
+    alert("plece fill the all data")
+  }
+  else{
+    account_data.push(form_data)
+    localStorage.setItem("account-data",JSON.stringify(account_data))
+    alert("Sign Up successfull")
+  }
+  }
+ 
+  form.reset()
+  window.location.assign("sign in.html")
+ 
+})
+</script>

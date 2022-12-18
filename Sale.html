@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Sale</title>
+    <style>
+        *body{
+            width: 100%;
+            margin: 0%;
+            padding: 0%;
+        }
+       
+         #nav {
+            display: flex;
+            justify-content: space-evenly;
+            background-color: rgb(203, 196, 196);
+            margin-top: -0.5%;
+
+        }
+
+       #nav img{
+        width: 40%;
+       }
+
+        #nav>div:nth-child(1) {
+            width: 40%;
+            margin-top: 15px;
+            margin-left: 5px;
+            margin-right: 25px;
+        }
+
+        #nav>div:nth-child(2) {
+            width: 100%;
+            margin-left: -200px;
+            margin-top: 16px;
+
+
+        }
+
+        #nav>div:nth-child(2)>a {
+            text-decoration: none;
+            color: black;
+            padding: 8px;
+            font-size: 15px;
+
+        }
+        #nav a:hover{
+            border-bottom: 1px solid rgb(124, 3, 3);
+        }
+
+        #nav>div:nth-child(3) {
+            display: flex;
+            justify-content: space-evenly;
+            width: 40%;
+            font-size: 12px;
+        }
+
+        #nav>div:nth-child(3)>img {
+            border-radius: 80px;
+            width: 50%;
+        }
+
+        #nav>div:nth-child(3)>input {
+            width: 40%;
+            height: 20px;
+            margin-top: 10px;
+        }
+
+        #nav>div:nth-child(3)>p {
+            padding-top: 7px;
+        }
+
+        #nav>div:nth-child(3)>button {
+            border: none;
+            background-color:rgb(203, 196, 196);
+            height: 50px;
+            width: 10%;
+        }
+        #nav>div:nth-child(3)>input{
+            border-bottom: 1px solid black;
+            border-top:none;
+            border-left: none;
+            border-right: none;
+            background-color:rgb(203, 196, 196);
+        }
+
+         
+        #holiday{
+            text-align: center;
+            width: 60%;
+            margin: auto;
+        }
+        h5{
+            font-style: oblique;
+            font-weight: lighter;
+            font-size: 15px;
+        }
+        #best{
+            text-align: center;
+            height: 30px;
+        }
+        #best>button{
+            border: none;
+            background-color: white;
+            width: 20%;
+            font-size: 15px;
+            margin-top: 0.5%
+        }
+        #best>button:hover{
+         border-bottom: 1px solid rgb(125, 3, 3);
+        }
+        #best>button:nth-child(2){
+            width: 8%;
+        }
+        #best>button:nth-child(1){
+            width: 25%;
+        }
+        #img{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 90%;
+        margin: auto;
+        gap: 20px;
+        }
+       
+        #today{
+            text-align: center;
+            width: 80%;
+            margin: auto;
+        }
+        input{
+            width: 60%;
+            border: none;
+            border-bottom: 1px solid black;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        #today>span>button:nth-child(1){
+         margin-right: 20px;
+        }
+        #today>span>button{
+            height: 35px;
+            background-color: white;
+            border: 0.5px solid black;
+            font-weight: bold;
+        }
+        .brand{
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            border: 0.5px solid black;
+            margin-top: 2%;
+            
+        }
+        .brand img{
+            width: 40%;
+            margin-top: 25%;
+            margin-left: 50px;
+        }
+       
+       #brand{
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin: auto;
+        gap: 10px;
+       
+       }
+       .img+div>span>button{
+        background-color: white;
+        margin-bottom: 10px;
+        width: 70%;
+        box-shadow: burlywood;
+        cursor: pointer;
+        height: 40px;
+        font-size: 20px;
+       
+       }
+       .img+div>span>button:hover{
+        background-color: black;
+        color: white;
+       }
+       .brand>div:nth-child(2){
+        width: 80%;
+       }
+       #footer{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            margin-top: 20px;
+
+        }
+
+            #footer-logo{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+        .h4{
+            text-align: center;
+        }
+        #footer>div:nth-child(5)>button{
+            margin-top: 20px;
+            width: 70%;
+            height: 40px;
+            font-size: 20px;
+        }
+        #footer>div:nth-child(5)>button:hover{
+background-color: black;
+color: white;
+        }
+        #footer>div:nth-child(5)>input{
+            border-left: none;
+            border-top: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+        }
+        h4{
+            margin-top: -10px;
+        }
+        #icon{
+            display: flex;
+        justify-content:right;
+ width: 40%;
+ margin-left: 700px;
+ 
+        }
+        #icon>img{
+            width: 5%;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div><a href="women.html"><img src="./stylize-logo-zip-file/png/logo-no-background.png" alt=""></a></div>
+        <div>
+            <a href="women.html">WOMEN</a>
+            <a href="Men.html">MEN</a>
+            <a href="Beauty.html">BEAUTY</a>
+            <a href="Kid.html">KIDS</a>
+            <a href="Home.html">HOME</a>
+            <a href="DESIGNERS.html">DESIGNERS</a>
+            <a href="Community.html" class="red">COMMUNITY</a>
+            <a href="">WHY MODESENS</a>
+            <a href="Sale.html" class="red">SALE</a>
+            
+        </div>
+        <div>
+            <!-- <img src="data:image/jpeg;base64,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" alt=""> -->
+            <p>USER NAME</p>
+            <button>CART</button>
+            <input type="text" placeholder="SEARCH">
+
+        </div>
+    </div>
+
+    <div id="holiday">
+        <h1>Holiday Gift Guide | ModeSens</h1>
+        <h5>ModeSens is your destination for the ultimate Holiday Gift Guide. Shop the best holiday sales only at ModeSens. With more than 500 luxury stores, ModeSens makes it easy for you to find holiday gifts and sales for designers like Gucci, Fendi, Prada, Dolce & Gabbana, Balenciaga and more. Don't miss out on the latest daily deal, and check ModeSens before you buy!</h5>
+    </div>
+<hr>
+    <div id="best">
+<button>Best Holiday Gift Guide and Deals</button>
+<button> Gift Guide</button>
+    </div>
+    <hr>
+    <div id="img">
+        <div>
+          <img src="https://modesens.com/banner/14532/getimg/?img=%2Fbanner%2F20221217-modesens-Farfetch-550x275-EN_1671178989.jpg" alt="">  
+          <img src="https://modesens.com/banner/14525/getimg/?img=%2Fbanner%2F20221216-modesens-Vestiaire-550x275-EN_1671099595.jpg" alt="">
+          <img src="https://modesens.com/banner/14353/getimg/?img=%2Fbanner%2F20221203-modesens-Mytheresa-550x275-EN_1669878967.jpg" alt="">
+          <img src="https://modesens.com/banner/14483/getimg/?img=%2Fbanner%2F20221215-modesens-NAP-550x275-EN_1671007203.jpg" alt="">
+          <img src="https://modesens.com/banner/14355/getimg/?img=%2Fbanner%2F20221212-modesens-LVR-550x275-F-EN_1670581285.jpg" alt="">
+          <img src="https://modesens.com/banner/14245/getimg/?img=%2Fbanner%2F20221125-modesens-Dorothee-550x275-F-EN_1669195516.jpg" alt="">
+          <img src="https://modesens.com/banner/14311/getimg/?img=%2Fbanner%2F20221129-modesens-SlamJam-550x275-M-EN_1669700129.jpg" alt="">
+          <img src="https://modesens.com/banner/14337/getimg/?img=%2Fbanner%2F20221215-modesens-Shopbop-550x275-EN_1671007203.jpg" alt="">
+          <img src="https://modesens.com/banner/14486/getimg/?img=%2Fbanner%2F20221217-modesens-Harvey-550x275-EN_1671178990.jpg" alt="">
+          <img src="https://modesens.com/banner/14460/getimg/?img=%2Fbanner%2F20221210-modesens-Modes-550x275-EN_1670490354.jpg" alt="">
+          <img src="https://modesens.com/banner/14341/getimg/?img=%2Fbanner%2F20221201-modesens-TheDoubleF-550x275-EN_1669782639.jpg" alt="">
+          <img src="https://modesens.com/banner/14359/getimg/?img=%2Fbanner%2F20221203-modesens-Michele-550x275-EN_1669878966.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://modesens.com/banner/14188/getimg/?img=%2Fbanner%2F20221208-modesens-SSENSE-550x275-EN_1670407738.jpg" alt="">
+            <img src="https://modesens.com/banner/14100/getimg/?img=%2Fbanner%2F20221205-modesens-Italist-550x275-EN_1670226052.jpg" alt="">
+            <img src="https://modesens.com/banner/14190/getimg/?img=%2Fbanner%2F20221121-modesens-Antonioli-550x275-EN_1669015263.jpg" alt="">
+            <img src="https://modesens.com/banner/14206/getimg/?img=%2Fbanner%2F20221122-modesens-d2-550x275-EN_1669103155.jpg" alt="">
+            <img src="https://modesens.com/banner/14243/getimg/?img=%2Fbanner%2F20221128Montblanc-Modesens550x275_1669620217.png" alt="">
+            <img src="https://modesens.com/banner/14309/getimg/?img=%2Fbanner%2F20221215-modesens-Matches-550x275-EN_1671007200.jpg" alt="">
+            <img src="https://modesens.com/banner/14484/getimg/?img=%2Fbanner%2F20221212-modesens-Harrods-550x275-EN_1670581283.jpg" alt="">
+            <img src="https://modesens.com/banner/14357/getimg/?img=%2Fbanner%2F20221203-modesens-BaseBlu-550x275-EN_1669878964.jpg" alt="">
+            <img src="https://modesens.com/banner/14402/getimg/?img=%2Fbanner%2F20221205-modesens-Tessabit-550x275-EN_1670226055.jpg" alt="">
+            <img src="https://modesens.com/banner/14102/getimg/?img=%2Fbanner%2F20221201-modesens-Wanan-550x275-EN_1669782640.jpg" alt="">
+            <img src="https://modesens.com/banner/14406/getimg/?img=%2Fbanner%2F20221205-modesens-Oluxury-550x275-F-EN_1670226053.jpg" alt="">
+        </div>
+    </div>
+    <div id="today">
+        <h1>Today’s Best Sellers</h1>
+        <input type="text" placeholder="Sreach sort name"><span><button>EXCLUSIVE OFFERS</button><button>SHARE</button></span>
+    </div>
+    <div id="brand">
+        <div class="brand">
+            <div class="img"><img src="https://cdn.modesens.com/merchant/nordstrom-1470104252?w=400" alt=""></div>
+            <div>
+                <h5>Enjoy up to 25% off select styles.</h5>
+                <hr>
+                <p>12/14/2022 - 12/21/2022</p><span><button>SHOP NOW</button></span>
+            </div>
+        </div>
+        <div class="brand">
+            <div class="img"><img src="https://cdn.modesens.com/merchant/nordstrom-1470104252?w=400" alt=""></div>
+            <div>
+                <h5>Enjoy up to 25% off select styles.</h5>
+                <hr>
+                <p>12/14/2022 - 12/21/2022</p><span><button>SHOP NOW</button></span>
+            </div>
+        </div>
+        <div class="brand">
+            <div class="img"><img src="https://cdn.modesens.com/merchant/nordstrom-1470104252?w=400" alt=""></div>
+            <div>
+                <h5>Enjoy up to 25% off select styles.</h5>
+                <hr>
+                <p>12/14/2022 - 12/21/2022</p><span><button>SHOP NOW</button></span>
+            </div>
+        </div>
+        <div class="brand">
+            <div class="img"><img src="https://cdn.modesens.com/merchant/nordstrom-1470104252?w=400" alt=""></div>
+            <div>
+                <h5>Enjoy up to 25% off select styles.</h5>
+                <hr>
+                <p>12/14/2022 - 12/21/2022</p><span><button>SHOP NOW</button></span>
+            </div>
+        </div>
+        <div class="brand">
+            <div class="img"><img src="https://cdn.modesens.com/merchant/nordstrom-1470104252?w=400" alt=""></div>
+            <div>
+                <h5>Enjoy up to 25% off select styles.</h5>
+                <hr>
+                <p>12/14/2022 - 12/21/2022</p><span><button>SHOP NOW</button></span>
+            </div>
+        </div>
+        <div class="brand">
+            <div class="img"><img src="https://cdn.modesens.com/merchant/nordstrom-1470104252?w=400" alt=""></div>
+            <div>
+                <h5>Enjoy up to 25% off select styles.</h5>
+                <hr>
+                <p>12/14/2022 - 12/21/2022</p><span><button>SHOP NOW</button></span>
+            </div>
+        </div>
+        <div class="brand">
+            <div class="img"><img src="https://cdn.modesens.com/merchant/nordstrom-1470104252?w=400" alt=""></div>
+            <div>
+                <h5>Enjoy up to 25% off select styles.</h5>
+                <hr>
+                <p>12/14/2022 - 12/21/2022</p><span><button>SHOP NOW</button></span>
+            </div>
+        </div>
+        <div class="brand">
+            <div class="img"><img src="https://cdn.modesens.com/merchant/nordstrom-1470104252?w=400" alt=""></div>
+            <div>
+                <h5>Enjoy up to 25% off select styles.</h5>
+                <hr>
+                <p>12/14/2022 - 12/21/2022</p><span><button>SHOP NOW</button></span>
+            </div>
+        </div>
+        <div class="brand">
+            <div class="img"><img src="https://cdn.modesens.com/merchant/nordstrom-1470104252?w=400" alt=""></div>
+            <div>
+                <h5>Enjoy up to 25% off select styles.</h5>
+                <hr>
+                <p>12/14/2022 - 12/21/2022</p><span><button>SHOP NOW</button></span>
+            </div>
+        </div>
+        <div class="brand">
+            <div class="img"><img src="https://cdn.modesens.com/merchant/nordstrom-1470104252?w=400" alt=""></div>
+            <div>
+                <h5>Enjoy up to 25% off select styles.</h5>
+                <hr>
+                <p>12/14/2022 - 12/21/2022</p><span><button>SHOP NOW</button></span>
+            </div>
+        </div>
+        <div class="brand">
+            <div class="img"><img src="https://cdn.modesens.com/merchant/nordstrom-1470104252?w=400" alt=""></div>
+            <div>
+                <h5>Enjoy up to 25% off select styles.</h5>
+                <hr>
+                <p>12/14/2022 - 12/21/2022</p><span><button>SHOP NOW</button></span>
+            </div>
+        </div>
+        <div class="brand">
+            <div class="img"><img src="https://cdn.modesens.com/merchant/nordstrom-1470104252?w=400" alt=""></div>
+            <div>
+                <h5>Enjoy up to 25% off select styles.</h5>
+                <hr>
+                <p>12/14/2022 - 12/21/2022</p><span><button>SHOP NOW</button></span>
+            </div>
+        </div>
+        
+        
+       
+          
+                
+
+    </div>
+     <!-- footer -->
+     <hr>
+     <div id="footer">
+         <div>
+             <h3>CUSTOMER CARE</h3>
+             <h4>Shopper Protection</h4>
+             <h4>Loyalty Program</h4>
+             <h4>Help Center</h4>
+             <h4>Size Guides</h4>
+             <h4>Contact Us / Feedback</h4>
+             <h4>Shipping / Returns</h4>
+         </div>
+         <div>
+             <h3>INFORMATION</h3>
+             <h4>About Us</h4>
+             <h4>Influencer Program</h4>
+             <h4>Partner Stores</h4>
+             <h4>Sitemap</h4>
+         </div>
+         <div>
+             <h3>LEGAL</h3>
+             <h4>Terms Of Use</h4>
+             <h4>Disclosure</h4>
+             <h4>Privacy Policy</h4>
+             <h4>Community Guidelines</h4>
+         </div>
+         <div>
+             <h3>Community Guidelines</h3>
+             <div id="footer-logo">
+                 <img src="https://cdn.modesens.com/static/img/20220815download_ios.svg" alt="">
+                 <img src="https://cdn.modesens.com/static/img/20220815download_android.svg" alt="">
+                 <img src="https://cdn.modesens.com/static/img/20220815down_chromestrore.svg" alt="">
+             </div>
+         </div>
+         <div>
+             <h3>NEWSLETTER SIGN UP</h3>
+             <input type="text" placeholder="Email Addeess">
+             <br>
+             <button>SUBMIT</button>
+         </div>
+     </div>
+     <h4 class="h4">When you follow our links to visit a brand or retailer’s website or make a purchase, ModeSens may earn a commission.</h4>
+      <hr>
+ 
+      <div id="icon">
+         <img src="https://cdn.modesens.com/static/img/20220726Pinterest.svg" alt="">
+         <img src="https://cdn.modesens.com/static/img/20220726Twitter.svg" alt="">
+         <img src="https://cdn.modesens.com/static/img/20220726Ins.svg" alt="">
+         <img src="https://cdn.modesens.com/static/img/20220726Facebook.svg" alt="">
+         <img src="https://cdn.modesens.com/static/img/20220726Weibo.svg" alt="">
+         <img src="https://cdn.modesens.com/static/img/20220726Reddit.svg" alt="">
+         <img src="https://cdn.modesens.com/static/img/20220726Discord.svg" alt="">
+      </div>
+</body>
+</html>
