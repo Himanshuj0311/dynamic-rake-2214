@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <style>
+        #singup{
+            display: flex;
+            align-content: center;
+            justify-content: space-evenly;
+            background-color: whitesmoke;
+            
+        }
+        #singup>div:nth-child(1){
+            background-color: black;
+            color: white;
+            width: 40%;
+            height: 500px;
+           align-content: center;
+           margin-left: 125px;
+          
+        }
+        img{
+            width: 70%;
+            margin-top: 20%;
+            margin-left: 20%;
+           
+        }
+        #singup>div:nth-child(1)>h2{
+            margin-top: -5px;
+            margin-left: 20%;
+        }
+        #singup>div:nth-child(1)>h4{
+            margin-top: -5px;
+            margin-left: 20%;
+        }
+        #singup>div:nth-child(2){
+            text-align: center;
+            background-color: white;
+           padding: 20px;
+           margin-right: 120px;
+        }
+        #singup>div:nth-child(2)>form>input{
+           width: 70%;
+           text-align: center;
+           margin: 5px;
+           height: 40px;
+           background-color: white;
+           border: .5px solid black;
+        }
+        #singup>div:nth-child(2)>form>input:nth-child(4){
+           width: 70%;
+           text-align: center;
+           margin: 10px;
+           height: 40px;
+           font-size: 20px;
+           color: white;
+           background-color: black;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="singup">
+       <div>
+        <img src="./stylize-logo-zip-file/png/logo-no-background.png" alt="">
+        <h2>BY SHOPPERS FOR SHOPPERS</h2>
+        <H4>COMPERE ACROSS 500+ STORES</H4>
+        <H4>GET ALERTS ON YOUR ITEMS </H4>
+        <H4>SAVE YOUR SEARCHES</H4>
+        <H4>EARN POINTS</H4>
+       </div>
+       <div>
+        <h3>Sign In an account</h3>
+        <h4>Unleash your shopping power.
+            Check stylize before you buy.</h4>
+           <form action="">
+            <input type="text" placeholder="Email" id="email">
+            <input type="password" placeholder="password" id="password">
+            <p>Subscribe to personalized sale updates and offers</p>
+            <input type="submit" value="submit">
+           </form>
+            
+       </div>
+    </div>
+</body>
+</html>
+<script>
+    let account_data=JSON.parse(localStorage.getItem("account-data"));
+    let form=document.querySelector("form");
+    form.addEventListener("submit",function(event){
+      event.preventDefault();
+
+      let count=0;
+      let user;
+  account_data.forEach(function(el){
+    if(el.email===form.email.value){
+        count++
+        user=el;
+    }
+  })
+  if(count==0){
+    alert("usre is not registered")
+  }
+  else{
+     if(user.password!==form.password.value){
+           alert("wrong password")
+     }
+     else{
+        alert("successfull login")
+        window.location.assign("./women.html")
+        form.reset()
+     }
+  }
+     
+      })
+
+    
+</script>

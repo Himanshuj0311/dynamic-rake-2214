@@ -77,6 +77,10 @@
             border-right: none;
             background-color:rgb(203, 196, 196);
         }
+        #nav>div:nth-child(2)>a:hover{
+            border-bottom: 1px solid rgb(111, 1, 1);
+           
+        }
 
         #silder {
             width: 80%;
@@ -88,6 +92,7 @@
             width: 105%;
             margin-left: -25px;
         }
+       
 
         
 
@@ -116,12 +121,14 @@
             margin-top: 50px;
             margin-bottom: 40px;
         }
-
+.swiper-wrapper{
+    width:80%;
+}
         .swiper-slide {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             text-align: center;
-           
+           width: 90%;
             margin-left: 30px;
             margin-top: 50px;
 
@@ -217,12 +224,28 @@
             display: flex;
         justify-content:right;
  width: 40%;
- margin-left: 800px;
+ margin-left: 720px;
  
         }
         #icon>img{
             width: 5%;
         }
+        /* #nav>div:nth-child(2)>a:nth-child(1){
+            display: block;
+        } */
+        #womenhover{
+            display: flex;
+            justify-content: space-around;
+           width: 40%;
+        }
+        #womenhover>a{
+            text-decoration: none;
+           color: black;
+        }
+        #womenmain{
+            display: none;
+        }
+       
 
         /* .img{
             display: grid;
@@ -242,21 +265,34 @@
         <div>
             <a href="women.html">WOMEN</a>
             <a href="Men.html">MEN</a>
+            <a href="Beauty.html">BEAUTY</a>
             <a href="Kid.html">KIDS</a>
             <a href="Home.html">HOME</a>
-            <a href="">DESIGNERS</a>
-            <a href="">COMMUNITY</a>
-            <a href="">WHY MODESENS</a>
-            <a href="" class="red">SALE</a>
-            <a href="" class="red">GIFT GUIDE</a>
+            <a href="DESIGNERS.html">DESIGNERS</a>
+            <a href="Community.html" class="red">COMMUNITY</a>
+            <a href="why modneces.html">WHY MODESENS</a>
+            <a href="Sale.html" class="red">SALE</a>
+            
         </div>
         <div>
             <!-- <img src="data:image/jpeg;base64,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" alt=""> -->
-            <p>USER NAME</p>
+          <button id="signup">SIGNUP</button>
             <button>CART</button>
             <input type="text" placeholder="SEARCH">
 
         </div>
+    </div>
+
+    <div id="womenmain">
+        <hr>
+        <div id="womenhover">
+            <a href="">SHOP ALL</a>
+            <a href="">CLOTHING</a>
+            <a href="">BAG</a>
+            <a href="">SHOES</a>
+            <a href="">BEAUTY</a>
+        </div>
+        <hr>
     </div>
 
     <!-- silder  -->
@@ -288,7 +324,7 @@
          Additional required wrapper -->
         <!-- <div class="swiper-wrapper">
             Slides -->
-           \ -->
+        
             <!-- <div>
                 
                 <div class="img">
@@ -327,7 +363,7 @@
         <!-- If we need scrollbar
         <div class="swiper-scrollbar"></div> -->
         <!-- <button>SHOP MORE</button>
-    </div> --> -->
+    </div> --> 
 
    
 
@@ -854,6 +890,10 @@
         // And if we need scrollbar
 
     });
+    let signup=document.querySelector("#signup");
+    signup.addEventListener("click",function(){
+       window.location.assign("./singup.html")
+    })
     
    
 </script>
